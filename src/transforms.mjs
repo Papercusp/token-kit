@@ -1,7 +1,7 @@
-// Generic SD transforms (culori-backed). Extractable to the shared kit.
-//   restart/name   — kebab var names, dropping the leading `color.` segment
-//   restart/srgb   — any color → hex, or rgba() when alpha < 1   (web + grid)
-//   restart/oklch  — any color → oklch(L C H [/ a])               (shop @theme)
+// Generic SD transforms (culori-backed). Brand-neutral — shared across projects.
+//   tokenkit/name   — kebab var names, dropping the leading `color.` segment
+//   tokenkit/srgb   — any color → hex, or rgba() when alpha < 1   (web + grid)
+//   tokenkit/oklch  — any color → oklch(L C H [/ a])               (shop @theme)
 import { parse, formatHex, converter } from 'culori';
 
 const toOklch = converter('oklch');
@@ -33,21 +33,21 @@ function oklchString(value) {
 
 export const transforms = [
   {
-    name: 'restart/name',
+    name: 'tokenkit/name',
     type: 'name',
     // Drop a leading `color.` (primitives) or `shop.` (per-surface) segment.
     transform: (t) =>
       (t.path[0] === 'color' || t.path[0] === 'shop' ? t.path.slice(1) : t.path).join('-').toLowerCase(),
   },
   {
-    name: 'restart/srgb',
+    name: 'tokenkit/srgb',
     type: 'value',
     transitive: false,
     filter: (t) => t.$type === 'color',
     transform: (t) => srgbString(v(t)),
   },
   {
-    name: 'restart/oklch',
+    name: 'tokenkit/oklch',
     type: 'value',
     transitive: false,
     filter: (t) => t.$type === 'color',

@@ -19,8 +19,8 @@ formats.forEach((f) => StyleDictionary.registerFormat(f));
 
 | Export | |
 |---|---|
-| `transforms` | `restart/name` (kebab var names, drop `color.`/`shop.` prefix), `restart/srgb` (→ hex or `rgba()`), `restart/oklch` (→ `oklch(L C H [/ a])`) — culori-backed |
-| `formats` | `restart/tailwind-theme` (Tailwind v4 `@theme { --color-* }` block), `restart/grid-ts` (typed `as const` object for canvas/JS consumers) |
+| `transforms` | `tokenkit/name` (kebab var names, drop `color.`/`shop.` prefix), `tokenkit/srgb` (→ hex or `rgba()`), `tokenkit/oklch` (→ `oklch(L C H [/ a])`) — culori-backed |
+| `formats` | `tokenkit/tailwind-theme` (Tailwind v4 `@theme { --color-* }` block), `tokenkit/grid-ts` (typed `as const` object for canvas/JS consumers) |
 | `preflight` | source guards: zero-token files, tree-merge collisions, duplicate `$schema`/`_meta` |
 
 ## What's NOT here
