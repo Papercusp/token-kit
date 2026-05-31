@@ -23,6 +23,10 @@ formats.forEach((f) => StyleDictionary.registerFormat(f));
 | `formats` | `tokenkit/tailwind-theme` (Tailwind v4 `@theme { --color-* }` block), `tokenkit/grid-ts` (typed `as const` object for canvas/JS consumers) |
 | `preflight` | source guards: zero-token files, tree-merge collisions, duplicate `$schema`/`_meta` |
 
+Both formats prepend a neutral `/* AUTO-GENERATED — DO NOT EDIT. */` banner so
+generated files carry no foreign branding; override it per file via the Style
+Dictionary `options.banner` (e.g. to name your own tool + regen command).
+
 ## What's NOT here
 
 Brand token **values**, project SD config, and project-specific drift/contract
