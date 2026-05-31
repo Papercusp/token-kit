@@ -26,10 +26,10 @@ formats.forEach((f) => StyleDictionary.registerFormat(f));
 ## What's NOT here
 
 Brand token **values**, project SD config, and project-specific drift/contract
-checks stay in each consumer (e.g. `@restart/design-tokens`).
+checks stay in each consumer (e.g. `@papercusp/design-tokens`).
 
 ## Ownership
 
 papercusp-owned shared library (per the "Restart depends on papercusp, never the
-reverse" rule). First consumer: `@restart/design-tokens`. See
+reverse" rule). First consumer: `@papercusp/design-tokens`. See
 `Restart/docs/design-tokens-brief-for-papercusp.md` for the cross-project plan.
