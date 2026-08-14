@@ -12,5 +12,10 @@
   },
   "peerDependencies": {
     "style-dictionary": "^4"
+  },
+  "peerDependenciesMeta": {
+    "style-dictionary": {
+      "optional": true
+    }
   }
 }
