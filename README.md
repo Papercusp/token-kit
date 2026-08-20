@@ -1,7 +1,7 @@
 # @papercusp/token-kit
 
 Generic, brand-value-free tooling for compiling DTCG design tokens to multiple
-formats with [Style Dictionary](https://styledictionary.com) v4. Shared across
+formats with [Style Dictionary](https://styledictionary.com) v4/v5. Shared across
 projects — each project supplies its own `*.tokens.json` sources + SD config and
 imports the transforms/formats/guards from here.
 

@@ -11,6 +11,6 @@
     "culori": "^4.0.1"
   },
   "peerDependencies": {
-    "style-dictionary": "^4"
+    "style-dictionary": "^4 || ^5"
   }
 }
