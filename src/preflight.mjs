@@ -1,6 +1,6 @@
 // Preflight checks for token sources (run before Style Dictionary).
 // Generic — no Restart-specific values; extractable to the shared kit.
-//   1. zero-token source file (SD v4 refuses to emit anything)
+//   1. zero-token source file (Style Dictionary refuses to emit anything)
 //   2. tree-merge collision (a token with both $value and child tokens)
 //   3. $schema/_meta duplicated across source files
 import { readFileSync } from 'node:fs';
@@ -29,7 +29,7 @@ export function preflight(sourceFiles) {
     try { json = JSON.parse(readFileSync(f, 'utf8')); }
     catch (e) { errors.push(`${f}: invalid JSON — ${e.message}`); continue; }
 
-    if (!hasTokens(json)) { errors.push(`${f}: zero tokens — SD v4 will emit nothing. Add a token or delete the file.`); continue; }
+    if (!hasTokens(json)) { errors.push(`${f}: zero tokens — Style Dictionary will emit nothing. Add a token or delete the file.`); continue; }
 
     const toks = [];
     walk(json, [], toks);
